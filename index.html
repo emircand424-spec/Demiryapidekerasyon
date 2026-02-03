@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Demir Yapı Dekorasyon | Kocaeli Dış Cephe Mantolama</title>
+
+<meta name="description" content="Demir Yapı Dekorasyon Kocaeli’de dış cephe mantolama, dekorasyon ve tadilat hizmetleri. Uygun fiyat ve kaliteli işçilik. Hemen arayın 0530 183 96 04">
+<meta name="keywords" content="kocaeli mantolama, dış cephe işleri, dekorasyon, tadilat, ısı yalıtım, demir yapı dekorasyon">
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#f2f2f2;
+color:#333;
+}
+
+header{
+background:#111;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+h1{margin:0}
+
+.slider{
+position:relative;
+height:300px;
+overflow:hidden;
+}
+
+.slide{
+display:none;
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.active{
+display:block;
+}
+
+section{
+padding:40px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+
+.card{
+background:white;
+padding:22px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn{
+display:inline-block;
+margin:8px;
+padding:14px 26px;
+background:#111;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 20px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🏗️ Demir Yapı Dekorasyon</h1>
+<p>Kocaeli’de Profesyonel Dış Cephe Mantolama & Dekorasyon Hizmetleri</p>
+</header>
+
+<!-- FOTOĞRAF SLIDER -->
+<div class="slider">
+<img src="https://images.pexels.com/photos/3837048/pexels-photo-3837048.jpeg" class="slide active">
+<img src="https://images.pexels.com/photos/6578013/pexels-photo-6578013.jpeg" class="slide">
+<img src="https://images.pexels.com/photos/5843992/pexels-photo-5843992.jpeg" class="slide">
+</div>
+
+<script>
+let i=0;
+const slides=document.querySelectorAll('.slide');
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},3000);
+</script>
+
+<section>
+<h2>Hizmetlerimiz</h2>
+
+<div class="services">
+<div class="card">🏢 Dış Cephe Mantolama</div>
+<div class="card">🔥 Isı Yalıtım</div>
+<div class="card">🎨 İç & Dış Dekorasyon</div>
+<div class="card">🔧 Tadilat & Onarım</div>
+<div class="card">🏗️ Anahtar Teslim İşler</div>
+</div>
+</section>
+
+<section>
+<h2>İletişim</h2>
+
+<div class="card" style="text-align:center;">
+<p><b>📞 0530 183 96 04</b></p>
+
+<a class="btn" href="tel:05301839604">Hemen Ara</a>
+<a class="btn" href="https://wa.me/905301839604" target="_blank">WhatsApp Yaz</a>
+
+<p style="margin-top:15px;">📍 Kocaeli / Tüm İlçeler</p>
+</div>
+</section>
+
+<footer>
+© 2026 Demir Yapı Dekorasyon | Tüm Hakları Saklıdır
+</footer>
+
+<!-- SABİT WHATSAPP BUTONU -->
+<a class="whatsapp" href="https://wa.me/905301839604" target="_blank">WhatsApp</a>
+
+</body>
+</html>

@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Demir Yapı Dekorasyon | Kocaeli Dış Cephe Mantolama</title>
 <meta name="description" content="Demir Yapı Dekorasyon Kocaeli’de dış cephe mantolama, dekorasyon ve tadilat hizmetleri. Profesyonel ve lüks çözümler.">
+
 <style>
-/* GENEL AYARLAR */
+/* GENEL */
 body{margin:0;font-family:'Arial',sans-serif;background:#f8f8f8;color:#333;}
 a{text-decoration:none;}
 header{background:#1c1c1c;color:white;text-align:center;padding:60px 20px;}
-h1{margin:0;font-size:2.5em;}
+h1{margin:0;font-size:2.8em;}
 h2{text-align:center;margin:40px 0 20px;font-size:2em;color:#111;}
-p{margin:10px 0;font-size:1em;}
+p{margin:10px 0;font-size:1em;line-height:1.5;}
 
 /* GALERİ */
 .gallery{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-bottom:50px;}
@@ -26,7 +27,7 @@ p{margin:10px 0;font-size:1em;}
 #lightbox span{position:absolute;top:20px;right:30px;font-size:40px;color:white;cursor:pointer;}
 
 /* SLIDER */
-.slider{position:relative;max-width:1000px;height:450px;margin:40px auto;overflow:hidden;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.2);}
+.slider{position:relative;max-width:1200px;height:500px;margin:50px auto;overflow:hidden;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.2);}
 .slide{display:none;width:100%;height:100%;object-fit:cover;transition:opacity 1s;}
 .active{display:block;}
 .slider-dots{text-align:center;margin-top:10px;}
@@ -34,7 +35,7 @@ p{margin:10px 0;font-size:1em;}
 .slider-dots .active-dot{background:#111;}
 
 /* HİZMETLER */
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:50px;}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin:50px 20px;}
 .card{background:white;padding:25px;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.1);text-align:center;font-weight:bold;font-size:18px;transition:transform 0.3s;}
 .card:hover{transform:translateY(-5px);}
 
@@ -49,12 +50,25 @@ p{margin:10px 0;font-size:1em;}
 footer{background:#1c1c1c;color:white;text-align:center;padding:25px;margin-top:50px;font-size:0.9em;}
 </style>
 </head>
+
 <body>
 
 <header>
 <h1>🏗️ Demir Yapı Dekorasyon</h1>
 <p>Kocaeli’de Profesyonel Dış Cephe Mantolama & Dekorasyon Hizmetleri</p>
 </header>
+
+<!-- SLIDER -->
+<div class="slider">
+  <img src="https://images.pexels.com/photos/3958955/pexels-photo-3958955.jpeg" class="slide active" alt="İnşaat 1">
+  <img src="https://images.pexels.com/photos/3747489/pexels-photo-3747489.jpeg" class="slide" alt="İnşaat 2">
+  <img src="https://images.pexels.com/photos/4087364/pexels-photo-4087364.jpeg" class="slide" alt="İnşaat 3">
+</div>
+<div class="slider-dots">
+  <span class="active-dot"></span>
+  <span></span>
+  <span></span>
+</div>
 
 <!-- GALERİ -->
 <h2>Hizmetlerimizden Örnekler</h2>
@@ -71,58 +85,6 @@ footer{background:#1c1c1c;color:white;text-align:center;padding:25px;margin-top:
   <span onclick="closeLightbox()">×</span>
   <img id="lightbox-img" src="">
 </div>
-
-<!-- SLIDER -->
-<div class="slider">
-  <img src="https://images.pexels.com/photos/3958955/pexels-photo-3958955.jpeg" class="slide active" alt="İnşaat 1">
-  <img src="https://images.pexels.com/photos/3747489/pexels-photo-3747489.jpeg" class="slide" alt="İnşaat 2">
-  <img src="https://images.pexels.com/photos/4087364/pexels-photo-4087364.jpeg" class="slide" alt="İnşaat 3">
-</div>
-<div class="slider-dots">
-  <span class="active-dot"></span>
-  <span></span>
-  <span></span>
-</div>
-
-<script>
-// SLIDER
-let slides=document.querySelectorAll('.slide');
-let current=0;
-let dots=document.querySelectorAll('.slider-dots span');
-
-function showSlide(index){
-  slides.forEach(s=>s.classList.remove('active'));
-  dots.forEach(d=>d.classList.remove('active-dot'));
-  slides[index].classList.add('active');
-  dots[index].classList.add('active-dot');
-  current=index;
-}
-
-function nextSlide(){
-  let next=(current+1)%slides.length;
-  showSlide(next);
-}
-dots.forEach((dot,i)=>dot.addEventListener('click',()=>showSlide(i)));
-
-slides[current].classList.add('active');
-dots[current].classList.add('active-dot');
-setInterval(nextSlide,3000);
-
-// LIGHTBOX
-const galleryImages=document.querySelectorAll('.gallery img');
-const lightbox=document.getElementById('lightbox');
-const lightboxImg=document.getElementById('lightbox-img');
-
-galleryImages.forEach(img=>{
-  img.addEventListener('click',()=>{
-    lightbox.style.display='flex';
-    lightboxImg.src=img.src;
-  });
-});
-function closeLightbox(){
-  lightbox.style.display='none';
-}
-</script>
 
 <!-- HİZMETLER -->
 <section>
@@ -152,6 +114,43 @@ function closeLightbox(){
 </footer>
 
 <a class="whatsapp" href="https://wa.me/905301839604" target="_blank">WhatsApp</a>
+
+<script>
+// SLIDER
+let slides=document.querySelectorAll('.slide');
+let current=0;
+let dots=document.querySelectorAll('.slider-dots span');
+
+function showSlide(index){
+  slides.forEach(s=>s.classList.remove('active'));
+  dots.forEach(d=>d.classList.remove('active-dot'));
+  slides[index].classList.add('active');
+  dots[index].classList.add('active-dot');
+  current=index;
+}
+
+function nextSlide(){
+  let next=(current+1)%slides.length;
+  showSlide(next);
+}
+dots.forEach((dot,i)=>dot.addEventListener('click',()=>showSlide(i)));
+slides[current].classList.add('active');
+dots[current].classList.add('active-dot');
+setInterval(nextSlide,3000);
+
+// LIGHTBOX
+const galleryImages=document.querySelectorAll('.gallery img');
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightbox-img');
+
+galleryImages.forEach(img=>{
+  img.addEventListener('click',()=>{
+    lightbox.style.display='flex';
+    lightboxImg.src=img.src;
+  });
+});
+function closeLightbox(){ lightbox.style.display='none'; }
+</script>
 
 </body>
 </html>

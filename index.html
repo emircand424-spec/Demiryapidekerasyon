@@ -2,155 +2,233 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Demir Yapı Dekorasyon | Kocaeli Dış Cephe Mantolama</title>
-<meta name="description" content="Demir Yapı Dekorasyon Kocaeli’de dış cephe mantolama, dekorasyon ve tadilat hizmetleri. Profesyonel ve lüks çözümler.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Başer Yapı Dekorasyon | Kocaeli İnşaat & Tadilat</title>
+
+<meta name="description" content="Başer Yapı Dekorasyon Kocaeli bölgesinde alçıpan, tadilat, dekorasyon, boya, mantolama ve anahtar teslim inşaat hizmetleri sunar. 0534 331 26 24">
 
 <style>
-/* GENEL */
-body{margin:0;font-family:'Arial',sans-serif;background:#f8f8f8;color:#333;}
-a{text-decoration:none;}
-header{background:#1c1c1c;color:white;text-align:center;padding:60px 20px;}
-h1{margin:0;font-size:2.8em;}
-h2{text-align:center;margin:40px 0 20px;font-size:2em;color:#111;}
-p{margin:10px 0;font-size:1em;line-height:1.5;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', Arial;
+scroll-behavior:smooth;
+}
 
-/* GALERİ */
-.gallery{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-bottom:50px;}
-.gallery div{flex:1 1 calc(33% - 15px);box-sizing:border-box;}
-.gallery img{width:100%;height:auto;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.15);transition:transform 0.3s;cursor:pointer;}
-.gallery img:hover{transform:scale(1.05);}
+body{
+background:#f3f3f3;
+color:#333;
+}
 
-/* LIGHTBOX */
-#lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:none;align-items:center;justify-content:center;z-index:1000;}
-#lightbox img{max-width:90%;max-height:80%;border-radius:10px;}
-#lightbox span{position:absolute;top:20px;right:30px;font-size:40px;color:white;cursor:pointer;}
+/* ===== NAVBAR ===== */
+nav{
+background:#111;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+z-index:999;
+}
 
-/* SLIDER */
-.slider{position:relative;max-width:1200px;height:500px;margin:50px auto;overflow:hidden;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.2);}
-.slide{display:none;width:100%;height:100%;object-fit:cover;transition:opacity 1s;}
-.active{display:block;}
-.slider-dots{text-align:center;margin-top:10px;}
-.slider-dots span{height:12px;width:12px;margin:0 5px;background:#bbb;display:inline-block;border-radius:50%;cursor:pointer;transition:background 0.3s;}
-.slider-dots .active-dot{background:#111;}
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:600;
+}
 
-/* HİZMETLER */
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin:50px 20px;}
-.card{background:white;padding:25px;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.1);text-align:center;font-weight:bold;font-size:18px;transition:transform 0.3s;}
-.card:hover{transform:translateY(-5px);}
+/* ===== HERO ===== */
+.hero{
+height:100vh;
+background:url("hero.jpg") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+}
 
-/* BUTON */
-.btn{display:inline-block;margin:8px;padding:16px 28px;background:#111;color:white;border-radius:10px;font-weight:bold;transition:background 0.3s;}
-.btn:hover{background:#333;}
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+}
 
-/* SABİT WHATSAPP */
-.whatsapp{position:fixed;bottom:25px;right:25px;background:#25D366;padding:18px 22px;border-radius:50px;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(0,0,0,0.3);}
+.hero-content{
+position:relative;
+z-index:2;
+}
 
-/* FOOTER */
-footer{background:#1c1c1c;color:white;text-align:center;padding:25px;margin-top:50px;font-size:0.9em;}
+.hero h1{
+font-size:70px;
+font-weight:900;
+}
+
+.hero p{
+font-size:22px;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 35px;
+background:#ff9800;
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* ===== SECTIONS ===== */
+section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:36px;
+}
+
+/* ===== SERVICES ===== */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 5px 12px rgba(0,0,0,0.1);
+text-align:center;
+font-weight:600;
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:8px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+padding:15px 18px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>🏗️ Demir Yapı Dekorasyon</h1>
-<p>Kocaeli’de Profesyonel Dış Cephe Mantolama & Dekorasyon Hizmetleri</p>
-</header>
-
-<!-- SLIDER -->
-<div class="slider">
-  <img src="https://images.pexels.com/photos/3958955/pexels-photo-3958955.jpeg" class="slide active" alt="İnşaat 1">
-  <img src="https://images.pexels.com/photos/3747489/pexels-photo-3747489.jpeg" class="slide" alt="İnşaat 2">
-  <img src="https://images.pexels.com/photos/4087364/pexels-photo-4087364.jpeg" class="slide" alt="İnşaat 3">
+<!-- NAV -->
+<nav>
+<div><b>BAŞER YAPI</b></div>
+<div>
+<a href="#hizmet">Hizmetler</a>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#galeri">Galeri</a>
+<a href="#iletisim">İletişim</a>
 </div>
-<div class="slider-dots">
-  <span class="active-dot"></span>
-  <span></span>
-  <span></span>
-</div>
+</nav>
 
-<!-- GALERİ -->
-<h2>Hizmetlerimizden Örnekler</h2>
-<div class="gallery">
-  <div><img src="https://images.pexels.com/photos/3958955/pexels-photo-3958955.jpeg" alt="Dış cephe inşaat"></div>
-  <div><img src="https://images.pexels.com/photos/3747489/pexels-photo-3747489.jpeg" alt="İnşaat alanı"></div>
-  <div><img src="https://images.pexels.com/photos/4087364/pexels-photo-4087364.jpeg" alt="Bina mantolama"></div>
-  <div><img src="https://images.pexels.com/photos/3807692/pexels-photo-3807692.jpeg" alt="Dış cephe dekorasyonu"></div>
-  <div><img src="https://images.pexels.com/photos/4393910/pexels-photo-4393910.jpeg" alt="Şantiye örneği"></div>
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+<h1>BAŞER YAPI</h1>
+<p>Profesyonel İnşaat & Dekorasyon Hizmetleri</p>
+<p>📞 0534 331 26 24</p>
+<a href="tel:05343312624" class="btn">Hemen Ara</a>
+</div>
 </div>
 
-<!-- LIGHTBOX -->
-<div id="lightbox">
-  <span onclick="closeLightbox()">×</span>
-  <img id="lightbox-img" src="">
-</div>
-
-<!-- HİZMETLER -->
-<section>
+<!-- SERVICES -->
+<section id="hizmet">
 <h2>Hizmetlerimiz</h2>
 <div class="services">
-  <div class="card">🏢 Dış Cephe Mantolama</div>
-  <div class="card">🔥 Isı Yalıtım</div>
-  <div class="card">🎨 İç & Dış Dekorasyon</div>
-  <div class="card">🔧 Tadilat & Onarım</div>
-  <div class="card">🏗️ Anahtar Teslim İşler</div>
+<div class="card">Alçıpan & Asma Tavan</div>
+<div class="card">Boya & Badana</div>
+<div class="card">Fayans / Seramik</div>
+<div class="card">Anahtar Teslim Tadilat</div>
+<div class="card">Mantolama & Dış Cephe</div>
+<div class="card">Dekorasyon & İç Tasarım</div>
+<div class="card">Kaba İnşaat İşleri</div>
+<div class="card">Tamir & Bakım</div>
 </div>
 </section>
 
-<!-- İLETİŞİM -->
-<section>
-<h2>İletişim</h2>
-<div class="card" style="text-align:center;">
-<p><b>📞 0530 183 96 04</b></p>
-<a class="btn" href="tel:05301839604">Hemen Ara</a>
-<a class="btn" href="https://wa.me/905301839604" target="_blank">WhatsApp Yaz</a>
-<p style="margin-top:15px;">📍 Kocaeli / Tüm İlçeler</p>
+<!-- ABOUT -->
+<section id="hakkimizda">
+<h2>Hakkımızda</h2>
+<p style="text-align:center; font-size:18px;">
+Başer Yapı olarak Kocaeli ve çevresinde kaliteli, güvenilir ve sağlam yapı çözümleri sunuyoruz.
+Uzman ekibimizle tüm dekorasyon ve inşaat işleriniz zamanında ve profesyonel şekilde tamamlanır.
+</p>
+</section>
+
+<!-- GALLERY -->
+<section id="galeri">
+<h2>Çalışmalarımız</h2>
+<div class="gallery">
+<img src="hero.jpg">
+<img src="hero.jpg">
+<img src="hero.jpg">
 </div>
+</section>
+
+<!-- MAP + CONTACT -->
+<section id="iletisim">
+<h2>İletişim</h2>
+
+<p style="text-align:center; font-size:20px; margin-bottom:20px;">
+📞 0534 331 26 24
+</p>
+
+<iframe 
+src="https://maps.google.com/maps?q=Kocaeli&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300" style="border-radius:10px;">
+</iframe>
+
 </section>
 
 <footer>
-© 2026 Demir Yapı Dekorasyon | Tüm Hakları Saklıdır
+© 2026 Başer Yapı Dekorasyon | Kocaeli
 </footer>
 
-<a class="whatsapp" href="https://wa.me/905301839604" target="_blank">WhatsApp</a>
-
-<script>
-// SLIDER
-let slides=document.querySelectorAll('.slide');
-let current=0;
-let dots=document.querySelectorAll('.slider-dots span');
-
-function showSlide(index){
-  slides.forEach(s=>s.classList.remove('active'));
-  dots.forEach(d=>d.classList.remove('active-dot'));
-  slides[index].classList.add('active');
-  dots[index].classList.add('active-dot');
-  current=index;
-}
-
-function nextSlide(){
-  let next=(current+1)%slides.length;
-  showSlide(next);
-}
-dots.forEach((dot,i)=>dot.addEventListener('click',()=>showSlide(i)));
-slides[current].classList.add('active');
-dots[current].classList.add('active-dot');
-setInterval(nextSlide,3000);
-
-// LIGHTBOX
-const galleryImages=document.querySelectorAll('.gallery img');
-const lightbox=document.getElementById('lightbox');
-const lightboxImg=document.getElementById('lightbox-img');
-
-galleryImages.forEach(img=>{
-  img.addEventListener('click',()=>{
-    lightbox.style.display='flex';
-    lightboxImg.src=img.src;
-  });
-});
-function closeLightbox(){ lightbox.style.display='none'; }
-</script>
+<a class="whatsapp" href="https://wa.me/905343312624">WhatsApp</a>
 
 </body>
 </html>
